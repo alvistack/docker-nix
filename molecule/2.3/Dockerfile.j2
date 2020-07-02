@@ -44,3 +44,8 @@ ENV PATH "/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:$
 
 ENTRYPOINT [ "catatonit", "-g", "--", "docker-entrypoint.sh" ]
 CMD        [ "nix-build" ]
+
+# Explicitly set system user UID/GID
+RUN set -ex \
+    && groupadd -r nixbld \
+    && for i in $(seq 0 7); do useradd -r -g nixbld -d /nonexistent -M -s /usr/sbin/nologin nixbld$i; done
