@@ -40,7 +40,12 @@ RUN set -ex \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
     && rm -rf /var/lib/apt/lists/*
 
-ENV PATH "/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:$PATH"
+ENV ENV               "/etc/profile"
+ENV GIT_SSL_CAINFO    "/etc/ssl/certs/ca-certificates.crt"
+ENV NIX_PATH          "/nix/var/nix/profiles/per-user/root/channels"
+ENV NIX_SSL_CERT_FILE "/etc/ssl/certs/ca-certificates.crt"
+ENV PATH              "/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:$PATH"
+ENV USER              "root"
 
 ENTRYPOINT [ "catatonit", "-g", "--", "docker-entrypoint.sh" ]
 CMD        [ "nix-build" ]
