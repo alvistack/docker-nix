@@ -1,6 +1,10 @@
 # Docker Image Packaging for Nix
 
-## 2.3.6-XalvistackY - TBC
+## 2.3.7-XalvistackY - TBC
+
+### Major Changes
+
+## 2.3.7-4alvistack2 - 2020-08-26
 
 ### Major Changes
 
