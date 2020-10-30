@@ -18,36 +18,31 @@
   remote_user: root
   become: true
   tasks:
-    - name: include default variables
-      include_vars: "./vars/main.yml"
+    - name: groupadd
+      group:
+        name: "nixbld"
+        system: true
+        state: "present"
 
-    - name: include release specific variables
-      include_vars: "{{ lookup('first_found', _params) }}"
-      vars:
-        _params:
-          files:
-            - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
-            - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-            - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-            - "{{ ansible_distribution | lower }}.yml"
-            - "{{ ansible_os_family | lower }}.yml"
-          paths:
-            - "./vars"
-      ignore_errors: true
-
-    - name: include release specific tasks
-      include_tasks: "{{ lookup('first_found', _params) }}"
-      vars:
-        _params:
-          files:
-            - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
-            - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-            - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-            - "{{ ansible_distribution | lower }}.yml"
-            - "{{ ansible_os_family | lower }}.yml"
-          paths:
-            - "./tasks"
-      ignore_errors: true
+    - name: useradd
+      user:
+        name: "{{ item.name }}"
+        group: "nixbld"
+        groups: "nixbld"
+        home: "/nonexistent"
+        shell: "/usr/sbin/nologin"
+        system: true
+        create_home: false
+        state: "present"
+      loop:
+        - { name: "nixbld0" }
+        - { name: "nixbld1" }
+        - { name: "nixbld2" }
+        - { name: "nixbld3" }
+        - { name: "nixbld4" }
+        - { name: "nixbld5" }
+        - { name: "nixbld6" }
+        - { name: "nixbld7" }
 
     - name: prepare directories
       file:
