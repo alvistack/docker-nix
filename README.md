@@ -11,7 +11,7 @@ Learn more about Nix: <https://nixos.org/>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`2.3`, `latest`](https://github.com/alvistack/docker-nix/blob/master/packer/2.3/packer.json)
+  - [`2.3`, `latest`](https://github.com/alvistack/docker-nix/blob/master/packer/docker-2.3/packer.json)
 
 ## Overview
 
