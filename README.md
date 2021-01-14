@@ -1,9 +1,9 @@
 # Docker Image Packaging for Nix
 
-[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-nix/master)](https://gitlab.com/alvistack/docker-nix/-/pipelines)
+[![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-nix/master)](https://gitlab.com/alvistack/docker-nix/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-nix.svg)](https://github.com/alvistack/docker-nix/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-nix.svg)](https://github.com/alvistack/docker-nix/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/nix.svg)](https://hub.docker.com/r/alvistack/nix/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/nix-2.3.svg)](https://hub.docker.com/r/alvistack/nix-2.3)
 
 This image contains an installation of the Nix package manager.
 
@@ -11,7 +11,8 @@ Learn more about Nix: <https://nixos.org/>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`2.3`, `latest`](https://github.com/alvistack/docker-nix/blob/master/packer/docker-2.3/packer.json)
+  - [`alvistack/nix-2.3`](https://hub.docker.com/r/alvistack/nix-2.3)
+      - [`packer/docker-2.3/packer.json`](https://github.com/alvistack/docker-nix/blob/master/packer/docker-2.3/packer.json)
 
 ## Overview
 
@@ -41,13 +42,13 @@ Start Nix:
 
 ## Versioning
 
-### `alvistack/nix:latest`
+### `YYYYMMDD.Y.Z`
 
-The `latest` tag matches the most recent [GitHub Release](https://github.com/alvistack/docker-nix/releases) of this repository. Thus using `alvistack/nix:latest` or `alvistack/nix` will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-nix/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
-### `alvistack/nix:<version>`
+### `YYYYMMDD.0.0`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-nix) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](https://gitlab.com/alvistack/docker-nix/-/pipelines) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
