@@ -28,7 +28,7 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 Start Nix:
 
     # Pull latest image
-    docker pull alvistack/nix
+    docker pull alvistack/nix-2.3
     
     # Run as detach
     docker run \
@@ -36,7 +36,7 @@ Start Nix:
         --name nix \
         --volume ${PWD}:${PWD} \
         --workdir ${PWD} \
-        alvistack/nix
+        alvistack/nix-2.3
 
 **Success**. Nix is now available.
 
