@@ -4,9 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-nix.svg)](https://github.com/alvistack/docker-nix/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-nix.svg)](https://github.com/alvistack/docker-nix/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/nix-2.3.svg)](https://hub.docker.com/r/alvistack/nix-2.3)
-
 This image contains an installation of the Nix package manager.
-
 Learn more about Nix: <https://nixos.org/>
 
 ## Supported Tags and Respective Packer Template Links
@@ -17,7 +15,6 @@ Learn more about Nix: <https://nixos.org/>
 ## Overview
 
 This Docker container makes it easy to get an instance of nix up and running.
-
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
   - Packaging by Packer Docker builder and Ansible provisioner in single layer
@@ -26,18 +23,15 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 ### Quick Start
 
 Start Nix:
-
-    # Pull latest image
-    docker pull alvistack/nix-2.3
-    
-    # Run as detach
-    docker run \
-        -itd \
-        --name nix \
-        --volume ${PWD}:${PWD} \
-        --workdir ${PWD} \
-        alvistack/nix-2.3
-
+\# Pull latest image
+docker pull alvistack/nix-2.3
+\# Run as detach
+docker run   
+\-itd   
+\--name nix   
+\--volume ${PWD}:${PWD}   
+\--workdir ${PWD}   
+alvistack/nix-2.3
 **Success**. Nix is now available.
 
 ## Versioning
