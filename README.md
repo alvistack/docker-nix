@@ -3,7 +3,7 @@
 <img src="/alvistack.svg" width="75" alt="AlviStack">
 
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-nix/master)](https://gitlab.com/alvistack/docker-nix/-/pipelines)
-[![GitHub release](https://img.shields.io/github/release/alvistack/docker-nix.svg)](https://github.com/alvistack/docker-nix/releases)
+[![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-nix.svg)](https://github.com/alvistack/docker-nix/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-nix.svg)](https://github.com/alvistack/docker-nix/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/nix-2.3.svg)](https://hub.docker.com/r/alvistack/nix-2.3)
 
@@ -46,7 +46,7 @@ Start Nix:
 
 ### `YYYYMMDD.Y.Z`
 
-Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-nix/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-nix/tags) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
 ### `YYYYMMDD.0.0`
 
